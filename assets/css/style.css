@@ -1336,3 +1336,33 @@ textarea.input-field {
   .about-banner { max-width: 450px; }
 
 }
+
+
+
+/*-----------------------------------*\
+ * #HERO
+\*-----------------------------------*/
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px; /* Increased from 115px to push content down more */
+  margin-bottom: var(--section-padding);
+}
+
+/* For larger screens (992px and above) */
+@media (min-width: 992px) {
+  .hero {
+    padding-top: 0; /* Reset padding-top since absolute positioning is used */
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 60%; /* Changed from 50% to push content down more */
+    transform: translateY(-50%);
+    filter: drop-shadow(2px 4px 10px var(--black));
+  }
+}
